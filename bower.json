@@ -1,0 +1,25 @@
+{
+  "name": "search",
+  "description": "search auto complete",
+  "main": "index.js",
+  "authors": [
+    "Inesh"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "search",
+    "auto"
+  ],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+        "jquery": ">=1.7"
+    }
+}

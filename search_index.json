@@ -1,0 +1,5 @@
+db.books.createIndex(
+   {
+     name: "text"
+   }
+ )

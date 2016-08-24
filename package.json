@@ -1,0 +1,26 @@
+{
+  "name": "search",
+  "version": "1.0.0",
+  "description": "search auto complete",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ineshhetti/searchAuto.git"
+  },
+  "keywords": [
+    "search",
+    "auto"
+  ],
+  "author": "Inesh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ineshhetti/searchAuto/issues"
+  },
+  "homepage": "https://github.com/ineshhetti/searchAuto#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}

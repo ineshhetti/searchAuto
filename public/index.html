@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Graphics</title>
+    <script src="components/jquery/dist/jquery.min.js"></script>
+    <script src="components/jquery-ui/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="components/jquery-ui/themes/ui-darkness/jquery-ui.min.css">
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#field').autocomplete({
+                source: function (req, res) {
+                    $.ajax({
+                        url: "http://localhost:3000/autocomplete/" + req.term,
+                        dataType: "jsonp",
+                        type: "GET",
+                        data: {
+                            term: req.term
+                        }
+                    }).done(function (data) {
+                        res($.map(data, function (item) {
+                            return {
+                                label: item.name,
+                                value: item.name
+                            };
+                        }));
+                    }).fail(function () {
+                        alert('Error');
+                    });
+                },
+                select: function (event, ui) {
+
+                }
+            });
+
+        });
+    </script>
+
+</head>
+<body>
+    <label>Autocomplete</label>
+    <input type="text" id="field"/>
+</body>
+</html>
