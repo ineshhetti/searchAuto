@@ -6,10 +6,10 @@ var Server = mongo.Server,
 
 
 var server = new Server('localhost', 27017, {auto_reconnect: true});
-db = new Db('inesh-test-shopback', server);
+db = new Db('inesh-test-mongo', server);
 db.open(function(err, db) {
     if (!err) {
-        console.log("Connected to 'inesh-test-shopback' database");
+        console.log("Connected to 'inesh-test-mongo' database");
     }else{
         console.log(err);
     }
